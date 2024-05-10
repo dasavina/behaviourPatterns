@@ -1,12 +1,12 @@
-import strategy.AttackStrategy;
-import strategy.DebuffStrategy;
-import strategy.DefenceStrategy;
-import strategy.Strategy;
+package characters;
+
+import strategy.*;
 
 public class NPC extends Character {
     public NPC(int HP, int ATK, int DEF, String name) {
         super(HP, ATK, DEF, name);
     }
+    String state;
 
     public Strategy chooseBattleStrategy(PC enemy) {
         Strategy strategy = new AttackStrategy();

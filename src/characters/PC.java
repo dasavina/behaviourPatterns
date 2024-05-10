@@ -1,4 +1,6 @@
-public class PC extends Character{
+package characters;
+
+public class PC extends Character {
 
     public PC(int HP, int ATK, int DEF, String name) {
         super(HP, ATK, DEF, name);

@@ -4,22 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="541d3e32-b383-4304-959e-52ae49be85b9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/behaviourPatterns.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Character.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NPC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/strategy/AttackStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/strategy/DebuffStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/strategy/DefenceStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/strategy/Strategy.java" afterDir="false" />
+    <list default="true" id="541d3e32-b383-4304-959e-52ae49be85b9" name="Changes" comment="strategy">
+      <change afterPath="$PROJECT_DIR$/src/characters/Vendor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/memento/SavePoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state/HostileState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state/ImmuneState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state/NeutralState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state/SpareState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state/State.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/NPC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/PC.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,9 +75,31 @@
       <option name="presentableId" value="Default" />
       <updated>1715181634339</updated>
     </task>
+    <task id="LOCAL-00001" summary="strategy">
+      <option name="closed" value="true" />
+      <created>1715372941885</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715372941885</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="strategy" />
+    <option name="LAST_COMMIT_MESSAGE" value="strategy" />
   </component>
 </project>

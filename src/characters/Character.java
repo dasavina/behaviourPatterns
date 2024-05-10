@@ -1,10 +1,12 @@
+package characters;
+
 import java.util.ArrayList;
 
 public abstract class Character {
-    int HP;
-    int ATK;
-    int DEF;
-    String name;
+    public int HP;
+    public int ATK;
+    public int DEF;
+    public String name;
     ArrayList<String> buffs;
     ArrayList<String> debufs;
 
