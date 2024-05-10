@@ -4,19 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="541d3e32-b383-4304-959e-52ae49be85b9" name="Changes" comment="strategy">
-      <change afterPath="$PROJECT_DIR$/src/characters/Vendor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/memento/SavePoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/HostileState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/ImmuneState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/NeutralState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/SpareState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/State.java" afterDir="false" />
+    <list default="true" id="541d3e32-b383-4304-959e-52ae49be85b9" name="Changes" comment="memento + strategy&#10;strategy and conversation handlers to add">
+      <change afterPath="$PROJECT_DIR$/src/templateMethod/AtkDown.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/templateMethod/AtkUp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/templateMethod/Bleeding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/templateMethod/Curse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/templateMethod/DefDown.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/templateMethod/DefUp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/templateMethod/Effect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/templateMethod/Healing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/templateMethod/Immunity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/visitior/EffectHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/NPC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/PC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/characters/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/NPC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/characters/Vendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/Vendor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -83,7 +84,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715372941885</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="memento + strategy&#10;strategy and conversation handlers to add">
+      <option name="closed" value="true" />
+      <created>1715376695343</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715376695343</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -100,6 +109,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="strategy" />
-    <option name="LAST_COMMIT_MESSAGE" value="strategy" />
+    <MESSAGE value="memento + strategy&#10;strategy and conversation handlers to add" />
+    <option name="LAST_COMMIT_MESSAGE" value="memento + strategy&#10;strategy and conversation handlers to add" />
   </component>
 </project>
