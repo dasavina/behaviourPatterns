@@ -4,20 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="541d3e32-b383-4304-959e-52ae49be85b9" name="Changes" comment="memento + strategy&#10;strategy and conversation handlers to add">
-      <change afterPath="$PROJECT_DIR$/src/templateMethod/AtkDown.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templateMethod/AtkUp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templateMethod/Bleeding.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templateMethod/Curse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templateMethod/DefDown.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templateMethod/DefUp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templateMethod/Effect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templateMethod/Healing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templateMethod/Immunity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/visitior/EffectHandler.java" afterDir="false" />
+    <list default="true" id="541d3e32-b383-4304-959e-52ae49be85b9" name="Changes" comment="effects as templates added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/NPC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/Vendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/Vendor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templateMethod/AtkDown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/AtkDown.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templateMethod/AtkUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/AtkUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templateMethod/Bleeding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/Bleeding.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templateMethod/Curse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/Curse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templateMethod/DefDown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/DefDown.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templateMethod/DefUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/DefUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templateMethod/Effect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/Effect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templateMethod/Healing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/Healing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templateMethod/Immunity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/Immunity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -57,7 +54,8 @@
     "onboarding.tips.debug.path": "D:/crossPlatform/behaviourPatterns/src/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "inlay.hints"
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -92,7 +90,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715376695343</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="effects as templates added">
+      <option name="closed" value="true" />
+      <created>1715379352974</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715379352974</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -110,6 +116,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="strategy" />
     <MESSAGE value="memento + strategy&#10;strategy and conversation handlers to add" />
-    <option name="LAST_COMMIT_MESSAGE" value="memento + strategy&#10;strategy and conversation handlers to add" />
+    <MESSAGE value="effects as templates added" />
+    <option name="LAST_COMMIT_MESSAGE" value="effects as templates added" />
   </component>
 </project>

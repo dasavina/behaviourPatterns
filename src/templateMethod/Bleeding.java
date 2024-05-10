@@ -1,5 +1,7 @@
 package templateMethod;
 
+import visitior.EffectHandler;
+
 public class Bleeding extends Effect{
     public Bleeding(int duration) {
         super(duration);
@@ -11,4 +13,5 @@ public class Bleeding extends Effect{
         System.out.println("lost health due to bleeding");
         return HP;
     }
+
 }

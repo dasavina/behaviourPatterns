@@ -1,5 +1,7 @@
 package templateMethod;
 
+import visitior.EffectHandler;
+
 public class DefDown extends Effect{
     public DefDown(int duration) {
         super(duration);
@@ -14,4 +16,7 @@ public class DefDown extends Effect{
         System.out.println("decreased Defence");
         return  DEF;
     }
+
+
+
 }

@@ -1,5 +1,7 @@
 package templateMethod;
 
+import visitior.EffectHandler;
+
 public class AtkDown extends Effect{
     public AtkDown(int duration) {
         super(duration);
@@ -14,4 +16,5 @@ public class AtkDown extends Effect{
         System.out.println("decreased attack");
         return  ATK;
     }
+
 }
