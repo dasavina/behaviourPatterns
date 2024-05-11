@@ -1,7 +1,5 @@
 package templateMethod;
 
-import visitior.EffectHandler;
-
 public class AtkUp extends Effect{
     public AtkUp(int duration) {
         super(duration);
@@ -13,6 +11,7 @@ public class AtkUp extends Effect{
         for (int i = 0; i < duration; i++) {
             ATK+= 10;
         }
+        duration =0;
         System.out.println("increased attack");
         return  ATK;
     }

@@ -1,7 +1,5 @@
 package templateMethod;
 
-import visitior.EffectHandler;
-
 public class Healing extends Effect{
     public Healing(int duration) {
         super(duration);
@@ -12,6 +10,7 @@ public class Healing extends Effect{
     public int affect(int HP) {
             HP += 8;
         System.out.println("healing...");
+        duration--;
         return HP;
     }
 

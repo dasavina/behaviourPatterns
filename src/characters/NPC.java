@@ -11,10 +11,10 @@ public class NPC extends Character {
 
     public Strategy chooseBattleStrategy(PC enemy) {
         Strategy strategy = new AttackStrategy();
-        if (enemy.ATK - DEF <= 5 || HP - enemy.HP >= 100) {
+        if (enemy.stats.ATK - stats.DEF <= 5 || stats.HP - enemy.stats.HP >= 100) {
             strategy = new DefenceStrategy();
         }
-        if (enemy.ATK - ATK >= 100 || enemy.HP - HP >= 100) {
+        if (enemy.stats.ATK - stats.ATK >= 100 || enemy.stats.HP - stats.HP >= 100) {
             strategy = new DebuffStrategy();
         }
         return strategy;

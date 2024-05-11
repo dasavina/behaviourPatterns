@@ -1,21 +1,17 @@
 package memento;
 import characters.PC;
+import characters.Stats;
+
 public class SavePoint {
-    int HP;
-    int ATK;
-    int DEF;
+   Stats stats;
     public void save(PC character)
     {
-        HP = character.HP;
-        ATK = character.ATK;
-        DEF = character.DEF;
+        stats = character.stats;
         System.out.println("Saved stats");
     }
     public void load(PC character)
     {
-        character.HP = HP;
-        character.ATK = ATK;
-        character.DEF = DEF;
+        character.stats = stats;
         System.out.println("Loaded");
     }
 }

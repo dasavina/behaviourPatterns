@@ -1,9 +1,7 @@
 package templateMethod;
 
-import visitior.EffectHandler;
-
 public abstract class Effect {
-    boolean type;
+    public boolean type;
     public int duration;
 
     public Effect(int duration) {

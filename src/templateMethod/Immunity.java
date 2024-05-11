@@ -1,7 +1,5 @@
 package templateMethod;
 
-import visitior.EffectHandler;
-
 public class Immunity extends Effect {
 
     public Immunity(int duration) {
@@ -10,9 +8,10 @@ public class Immunity extends Effect {
     }
 
     @Override
-    public int affect(int numberOfDebuffs) {
+    public int affect(int num) {
         System.out.println("immune");
-        return numberOfDebuffs-1;
+        duration--;
+        return num;
     }
 
 

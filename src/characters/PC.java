@@ -6,10 +6,12 @@ public class PC extends Character {
         super(HP, ATK, DEF, name);
     }
 
+
+
     public PC(String name) {
-        HP = 100;
-        DEF = 10;
-        ATK = 50;
-        this.name = name;
+        super(name);
+        stats.HP = 100;
+        stats.DEF = 10;
+        stats.ATK = 50;
     }
 }

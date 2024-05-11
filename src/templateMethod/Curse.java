@@ -1,7 +1,5 @@
 package templateMethod;
 
-import visitior.EffectHandler;
-
 public class Curse extends Effect {
     public Curse(int duration) {
         super(duration);
@@ -9,9 +7,10 @@ public class Curse extends Effect {
     }
 
     @Override
-    public int affect(int numberOfDebuffs) {
+    public int affect(int num) {
         System.out.println("cursed");
-        return numberOfDebuffs - 1;
+        duration --;
+        return duration;
     }
 
 
