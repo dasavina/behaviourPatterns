@@ -2,17 +2,17 @@ package state;
 
 public class SpareState extends State{
     @Override
-    public void spare() {
-        System.out.println(" was spared");
+    public void spare(String name) {
+        System.out.println(name +" was spared");
     }
 
     @Override
     public void talk() {
-        System.out.println(" does not want to fight anymore and asks you to spare");
+        System.out.println(" You are asked to spare");
     }
 
     @Override
-    public void battle() {
-        System.out.println(" is disappointed. the chance is lost.");
+    public void battle(String name) {
+        System.out.println(name+" is disappointed. the chance is lost.");
     }
 }

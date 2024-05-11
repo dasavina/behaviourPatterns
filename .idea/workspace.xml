@@ -4,22 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="541d3e32-b383-4304-959e-52ae49be85b9" name="Changes" comment="current effect handler removed">
-      <change afterPath="$PROJECT_DIR$/src/chainOfRensponsibility/ATKHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chainOfRensponsibility/Chain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chainOfRensponsibility/CurseHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chainOfRensponsibility/DEFHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chainOfRensponsibility/HPHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chainOfRensponsibility/Handler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chainOfRensponsibility/ImmunityHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/characters/Stats.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/iterator/EffectList.java" afterDir="false" />
+    <list default="true" id="541d3e32-b383-4304-959e-52ae49be85b9" name="Changes" comment="handlers as chain of responsibility">
+      <change afterPath="$PROJECT_DIR$/src/characters/Fightable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mediator/Interaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/visitior/AffectingVisitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/visitior/AtkAffectingVisitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/visitior/DefAffectingVisitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/visitior/EffectVisitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/visitior/HPAffectingVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chainOfRensponsibility/ATKHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chainOfRensponsibility/Chain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chainOfRensponsibility/CurseHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chainOfRensponsibility/DEFHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chainOfRensponsibility/HPHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chainOfRensponsibility/Handler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chainOfRensponsibility/ImmunityHandler.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/characters/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/Character.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/characters/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/NPC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/characters/PC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/PC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/Vendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/Vendor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/memento/SavePoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/memento/SavePoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/characters/Stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/Stats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/characters/Vendor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iterator/EffectList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iterator/EffectList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/HostileState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/HostileState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/ImmuneState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/ImmuneState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/NeutralState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/NeutralState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/SpareState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/SpareState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/State.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templateMethod/AtkDown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/AtkDown.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templateMethod/AtkUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/AtkUp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templateMethod/Bleeding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/Bleeding.java" afterDir="false" />
@@ -29,7 +41,6 @@
       <change beforePath="$PROJECT_DIR$/src/templateMethod/Effect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/Effect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templateMethod/Healing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/Healing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templateMethod/Immunity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/Immunity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/visitior/EffectHandler.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +72,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -73,6 +85,20 @@
     "settings.editor.selected.configurable": "inlay.hints"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="behaviourPatterns" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -121,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715380134627</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="handlers as chain of responsibility">
+      <option name="closed" value="true" />
+      <created>1715390027488</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715390027488</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -141,6 +175,7 @@
     <MESSAGE value="memento + strategy&#10;strategy and conversation handlers to add" />
     <MESSAGE value="effects as templates added" />
     <MESSAGE value="current effect handler removed" />
-    <option name="LAST_COMMIT_MESSAGE" value="current effect handler removed" />
+    <MESSAGE value="handlers as chain of responsibility" />
+    <option name="LAST_COMMIT_MESSAGE" value="handlers as chain of responsibility" />
   </component>
 </project>

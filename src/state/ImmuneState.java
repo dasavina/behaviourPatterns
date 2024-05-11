@@ -3,8 +3,8 @@ package state;
 public class ImmuneState extends State{
 
     @Override
-    public void spare() {
-        System.out.println(" can't be fought - can't be spared!");
+    public void spare(String name) {
+        System.out.println(name+" can't be fought - can't be spared! Appreciates the gesture, though");
     }
 
     @Override
@@ -14,7 +14,7 @@ public class ImmuneState extends State{
     }
 
     @Override
-    public void battle() {
-        System.out.println(" is immune. Means you can't fight this character. Still offensive though");
+    public void battle(String name) {
+        System.out.println(name+" is immune. Means you can't fight this character. Still offensive though");
     }
 }

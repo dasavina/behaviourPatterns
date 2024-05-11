@@ -1,9 +1,13 @@
 package characters;
 
 public class PC extends Character {
-
+    public Stats stats;
     public PC(int HP, int ATK, int DEF, String name) {
-        super(HP, ATK, DEF, name);
+
+        super(name);
+        stats.ATK = ATK;
+        stats.HP = HP;
+        stats.DEF = DEF;
     }
 
 

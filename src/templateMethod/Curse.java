@@ -1,5 +1,7 @@
 package templateMethod;
 
+import visitior.EffectVisitor;
+
 public class Curse extends Effect {
     public Curse(int duration) {
         super(duration);
@@ -11,6 +13,11 @@ public class Curse extends Effect {
         System.out.println("cursed");
         duration --;
         return duration;
+    }
+
+    @Override
+    public void accept(EffectVisitor visitor) {
+        visitor.visit(this);
     }
 
 

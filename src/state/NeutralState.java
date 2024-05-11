@@ -3,8 +3,8 @@ package state;
 public class NeutralState extends State{
 
     @Override
-    public void spare() {
-        System.out.println(" does not understand the reason but appreciates anyways?");
+    public void spare(String name) {
+        System.out.println(name+" does not understand the reason but appreciates anyways?");
     }
 
     @Override
@@ -14,7 +14,7 @@ public class NeutralState extends State{
     }
 
     @Override
-    public void battle() {
-        System.out.println(" is now aggravated. The battle begins");
+    public void battle(String name) {
+        System.out.println(name+" is now aggravated. The battle begins");
     }
 }

@@ -1,5 +1,7 @@
 package templateMethod;
 
+import visitior.EffectVisitor;
+
 public class AtkUp extends Effect{
     public AtkUp(int duration) {
         super(duration);
@@ -14,6 +16,11 @@ public class AtkUp extends Effect{
         duration =0;
         System.out.println("increased attack");
         return  ATK;
+    }
+
+    @Override
+    public void accept(EffectVisitor visitor) {
+        visitor.visit(this);
     }
 
 }

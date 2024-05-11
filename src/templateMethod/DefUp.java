@@ -1,5 +1,7 @@
 package templateMethod;
 
+import visitior.EffectVisitor;
+
 public class DefUp extends Effect{
     public DefUp(int duration) {
         super(duration);
@@ -14,6 +16,11 @@ public class DefUp extends Effect{
         duration =0;
         System.out.println("increased Defence");
         return  DEF;
+    }
+
+    @Override
+    public void accept(EffectVisitor visitor) {
+        visitor.visit(this);
     }
 
 }

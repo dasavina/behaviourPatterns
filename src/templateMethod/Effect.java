@@ -1,5 +1,7 @@
 package templateMethod;
 
+import visitior.EffectVisitor;
+
 public abstract class Effect {
     public boolean type;
     public int duration;
@@ -9,7 +11,5 @@ public abstract class Effect {
     }
 
     public abstract int affect(int parameter);
-
-
-
+    public abstract void accept(EffectVisitor visitor);
 }

@@ -1,5 +1,7 @@
 package templateMethod;
 
+import visitior.EffectVisitor;
+
 public class Immunity extends Effect {
 
     public Immunity(int duration) {
@@ -14,6 +16,10 @@ public class Immunity extends Effect {
         return num;
     }
 
+    @Override
+    public void accept(EffectVisitor visitor) {
+        visitor.visit(this);
+    }
 
 
 }

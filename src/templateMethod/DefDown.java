@@ -1,5 +1,7 @@
 package templateMethod;
 
+import visitior.EffectVisitor;
+
 public class DefDown extends Effect{
     public DefDown(int duration) {
         super(duration);
@@ -16,6 +18,10 @@ public class DefDown extends Effect{
         return  DEF;
     }
 
+    @Override
+    public void accept(EffectVisitor visitor) {
+        visitor.visit(this);
+    }
 
 
 }

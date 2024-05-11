@@ -1,5 +1,7 @@
 package templateMethod;
 
+import visitior.EffectVisitor;
+
 public class Bleeding extends Effect{
     public Bleeding(int duration) {
         super(duration);
@@ -11,6 +13,11 @@ public class Bleeding extends Effect{
         System.out.println("lost health due to bleeding");
         duration--;
         return HP;
+    }
+
+    @Override
+    public void accept(EffectVisitor visitor) {
+        visitor.visit(this);
     }
 
 }

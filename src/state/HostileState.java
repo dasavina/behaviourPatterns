@@ -2,8 +2,8 @@ package state;
 
 public class HostileState extends State{
     @Override
-    public void spare() {
-        System.out.println("you can't spare yet");
+    public void spare(String name) {
+        System.out.println(name+" can't be spared yet");
     }
 
     @Override
@@ -12,7 +12,7 @@ public class HostileState extends State{
     }
 
     @Override
-    public void battle() {
-        System.out.println("...");
+    public void battle(String name) {
+        System.out.println(name+" prepares for the next move");
     }
 }

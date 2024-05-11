@@ -1,31 +1,26 @@
 package iterator;
 
-import chainOfRensponsibility.Chain;
-import characters.Character;
 import characters.Stats;
 import templateMethod.Effect;
+import visitior.EffectVisitor;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 public class EffectList implements Iterator<Effect> {
-    public List<Effect> list;
-    Chain chain = new Chain();
+    public List<Effect> list = new ArrayList<>();
     int currentIndex = 0;
 
-    Character character;
-    public EffectList(Character character) {
-        this.character = character;
-    }
-    public void add(Effect effect)
-    {
-        if (chain.handle("handleCurse", this, new Stats(0,0,0))==0 && effect.type
-                || chain.handle("handleImmunity", this, new Stats(0,0,0))==0 && !effect.type)
-        {
-            list.add(effect);
-        }
+    Stats stats;
+
+    public EffectList(Stats stats) {
+        this.stats = stats;
     }
 
+    public void add(Effect effect) {
+        list.add(effect);
+    }
 
     @Override
     public boolean hasNext() {
@@ -35,9 +30,7 @@ public class EffectList implements Iterator<Effect> {
     @Override
     public Effect next() {
         Effect result = list.get(currentIndex++);
-        chain.handle(result.getClass().getName(), this, character.stats);
         return result;
-
     }
 
     @Override
@@ -45,5 +38,13 @@ public class EffectList implements Iterator<Effect> {
         list.remove(--currentIndex);
     }
 
-}
+    public Stats getStats() {
+        return stats;
+    }
 
+    public void accept(EffectVisitor visitor) {
+        for (Effect effect : list) {
+            effect.accept(visitor);
+        }
+    }
+}

@@ -11,4 +11,12 @@ public class Stats {
         this.DEF = DEF;
     }
 
+    @Override
+    public String toString() {
+        return "Stats{" +
+                "HP=" + HP +
+                ", ATK=" + ATK +
+                ", DEF=" + DEF +
+                '}';
+    }
 }
