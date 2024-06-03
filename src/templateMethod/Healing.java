@@ -1,6 +1,7 @@
 package templateMethod;
 
-import visitior.EffectVisitor;
+import characters.Stats;
+import visitor.Visitor;
 
 public class Healing extends Effect{
     public Healing(int duration) {
@@ -10,15 +11,15 @@ public class Healing extends Effect{
 
     @Override
     public int affect(int HP) {
-            HP += 8;
+            HP += 10;
         System.out.println("healing...");
         duration--;
         return HP;
     }
 
     @Override
-    public void accept(EffectVisitor visitor) {
-        visitor.visit(this);
+    public Stats accept(Visitor visitor) {
+        return visitor.visit(this);
     }
 
 }

@@ -1,6 +1,7 @@
 package templateMethod;
 
-import visitior.EffectVisitor;
+import characters.Stats;
+import visitor.Visitor;
 
 public class Bleeding extends Effect{
     public Bleeding(int duration) {
@@ -9,15 +10,15 @@ public class Bleeding extends Effect{
     }
     @Override
     public int affect(int HP) {
-            HP -= 8;
+            HP -= 10;
         System.out.println("lost health due to bleeding");
         duration--;
         return HP;
     }
 
     @Override
-    public void accept(EffectVisitor visitor) {
-        visitor.visit(this);
+    public Stats accept(Visitor visitor) {
+        return visitor.visit(this);
     }
 
 }

@@ -1,6 +1,8 @@
 package templateMethod;
 
-import visitior.EffectVisitor;
+import characters.Stats;
+import observer.Observer;
+import visitor.Visitor;
 
 public class Immunity extends Effect {
 
@@ -17,9 +19,22 @@ public class Immunity extends Effect {
     }
 
     @Override
-    public void accept(EffectVisitor visitor) {
-        visitor.visit(this);
+    public Stats accept(Visitor visitor) {
+        return visitor.visit(this);
     }
 
+    @Override
+    public void addObserver(Observer observer) {
+        super.addObserver(observer);
+    }
 
+    @Override
+    public void removeObserver(Observer observer) {
+        super.removeObserver(observer);
+    }
+
+    @Override
+    public void notifyObservers() {
+        super.notifyObservers();
+    }
 }

@@ -8,7 +8,7 @@ public class HostileState extends State{
 
     @Override
     public void talk() {
-        System.out.println("you try to strike a conversation");
+        System.out.println("you try to strike a conversation. your opponent lost interest in a fight");
     }
 
     @Override

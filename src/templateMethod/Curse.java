@@ -1,6 +1,7 @@
 package templateMethod;
 
-import visitior.EffectVisitor;
+import characters.Stats;
+import visitor.Visitor;
 
 public class Curse extends Effect {
     public Curse(int duration) {
@@ -16,8 +17,8 @@ public class Curse extends Effect {
     }
 
     @Override
-    public void accept(EffectVisitor visitor) {
-        visitor.visit(this);
+    public Stats accept(Visitor visitor) {
+        return visitor.visit(this);
     }
 
 

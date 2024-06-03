@@ -1,6 +1,7 @@
 package templateMethod;
 
-import visitior.EffectVisitor;
+import characters.Stats;
+import visitor.Visitor;
 
 public class AtkUp extends Effect{
     public AtkUp(int duration) {
@@ -19,8 +20,8 @@ public class AtkUp extends Effect{
     }
 
     @Override
-    public void accept(EffectVisitor visitor) {
-        visitor.visit(this);
+    public Stats accept(Visitor visitor) {
+        return visitor.visit(this);
     }
 
 }

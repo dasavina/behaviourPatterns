@@ -1,50 +1,78 @@
 package iterator;
 
 import characters.Stats;
+import templateMethod.Curse;
 import templateMethod.Effect;
-import visitior.EffectVisitor;
+import templateMethod.Immunity;
+import visitor.Visitor;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class EffectList implements Iterator<Effect> {
-    public List<Effect> list = new ArrayList<>();
-    int currentIndex = 0;
 
-    Stats stats;
+public class EffectList implements Iterator<Effect> {
+    private List<Effect> list = new ArrayList<>();
+    private Stats stats;
+    int index;
 
     public EffectList(Stats stats) {
         this.stats = stats;
     }
 
     public void add(Effect effect) {
-        list.add(effect);
-    }
+        if (list.stream().anyMatch(e -> e instanceof Curse) && effect.type) {
+            for (Effect e : list) {
+                if (e instanceof Curse) {
+                    Curse curse = (Curse) e;
+                    curse.affect(0);
 
-    @Override
-    public boolean hasNext() {
-        return (currentIndex < list.size());
-    }
+                    break;
+                }
+            }
+        }
+        else if (list.stream().anyMatch(e -> e instanceof Immunity) && !effect.type) {
+            for (Effect e : list) {
+                if (e instanceof Immunity) {
+                    Immunity immunity = (Immunity) e;
+                    immunity.affect(0);
 
-    @Override
-    public Effect next() {
-        Effect result = list.get(currentIndex++);
-        return result;
-    }
+                    break;
+                }
+            }
+        }
+        else
+            {
+                list.add(effect);
+            }
+        }
 
-    @Override
-    public void remove() {
-        list.remove(--currentIndex);
-    }
+        @Override
+        public boolean hasNext () {
+            return (index < list.size());
+        }
 
-    public Stats getStats() {
-        return stats;
-    }
+        @Override
+        public Effect next () {
+            Effect result = list.get(index++);
+            return result;
+        }
 
-    public void accept(EffectVisitor visitor) {
-        for (Effect effect : list) {
-            effect.accept(visitor);
+        @Override
+        public void remove () {
+            list.remove(--index);
+        }
+
+        public Stats getStats () {
+            return stats;
+        }
+
+        public void accept (Visitor visitor){
+            Iterator<Effect> iterator = list.iterator();
+            while (iterator.hasNext()) {
+                visitor = new Visitor(stats);
+                Effect effect = iterator.next();
+                stats = effect.accept(visitor);
+            }
         }
     }
-}

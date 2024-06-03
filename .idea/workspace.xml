@@ -4,34 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="541d3e32-b383-4304-959e-52ae49be85b9" name="Changes" comment="handlers as chain of responsibility">
-      <change afterPath="$PROJECT_DIR$/src/characters/Fightable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mediator/Interaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/visitior/AffectingVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/visitior/AtkAffectingVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/visitior/DefAffectingVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/visitior/EffectVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/visitior/HPAffectingVisitor.java" afterDir="false" />
+    <list default="true" id="541d3e32-b383-4304-959e-52ae49be85b9" name="Changes" comment="tried the visitor">
+      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/AttackHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/BattleHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/Chain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/DeathHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/EndOfTurnHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/EnemyTurnHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/Handler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/ProceedHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/SaveHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/SpareHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/TalkHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/UseBuffHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/UseDebuffHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/system/EndOfTurn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/system/EnemyTurn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/system/Load.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/user/Attack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/user/Fight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/user/Proceed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/user/Save.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/user/Spare.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/user/Talk.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/user/UseBuff.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/user/UseDebuff.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/generators/BuffFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/generators/DebuffFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/generators/NPCFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mediator/Room.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/observer/EffectObserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/observer/Observable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/observer/Observer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/visitor/Visitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chainOfRensponsibility/ATKHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chainOfRensponsibility/Chain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chainOfRensponsibility/CurseHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chainOfRensponsibility/DEFHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chainOfRensponsibility/HPHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chainOfRensponsibility/Handler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chainOfRensponsibility/ImmunityHandler.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/characters/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/characters/Fightable.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/characters/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/NPC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/characters/PC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/PC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/Stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/Stats.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/Vendor.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/iterator/EffectList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iterator/EffectList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mediator/Interaction.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/state/HostileState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/HostileState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/ImmuneState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/ImmuneState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/NeutralState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/NeutralState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/SpareState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/SpareState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/State.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/ImmuneState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/strategy/AttackStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategy/AttackStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templateMethod/AtkDown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/AtkDown.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templateMethod/AtkUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/AtkUp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templateMethod/Bleeding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/Bleeding.java" afterDir="false" />
@@ -41,6 +57,11 @@
       <change beforePath="$PROJECT_DIR$/src/templateMethod/Effect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/Effect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templateMethod/Healing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/Healing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templateMethod/Immunity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/Immunity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/visitior/AffectingVisitor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/visitior/AtkAffectingVisitor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/visitior/DefAffectingVisitor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/visitior/EffectVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/visitor/EffectVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/visitior/HPAffectingVisitor.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +79,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;dasavina&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/dasavina/behaviourPatterns.git&quot;,
+    &quot;accountId&quot;: &quot;5730055a-1f19-429e-b9da-ceec7eb18f51&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -69,22 +105,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "D:/crossPlatform/behaviourPatterns/src/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "inlay.hints"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/crossPlatform/behaviourPatterns&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/crossPlatform/behaviourPatterns/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -98,13 +135,6 @@
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -155,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715390027488</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="tried the visitor">
+      <option name="closed" value="true" />
+      <created>1715437309638</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715437309638</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -176,6 +214,7 @@
     <MESSAGE value="effects as templates added" />
     <MESSAGE value="current effect handler removed" />
     <MESSAGE value="handlers as chain of responsibility" />
-    <option name="LAST_COMMIT_MESSAGE" value="handlers as chain of responsibility" />
+    <MESSAGE value="tried the visitor" />
+    <option name="LAST_COMMIT_MESSAGE" value="tried the visitor" />
   </component>
 </project>
