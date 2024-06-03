@@ -1,15 +1,17 @@
 package chainOfResponsibility;
 
 import command.Command;
-import command.user.Fight;
+import command.system.EncounterMenu;
+import command.system.EndOfTurn;
 
-public class BattleHandler extends Handler {
+public class EncounterMenuHandler extends Handler {
     @Override
     public void handleRequest(Command command) {
-        if (command instanceof Fight)
+        if (command instanceof EncounterMenu)
         {
             command.execute();
-        }else if (successor != null) {
+        }
+        else if (successor != null) {
             successor.handleRequest(command);
         }
     }

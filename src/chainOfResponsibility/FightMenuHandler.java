@@ -1,18 +1,17 @@
 package chainOfResponsibility;
 
 import command.Command;
-import command.user.Proceed;
+import command.system.FightMenu;
 
-public class ProceedHandler extends Handler {
+public class FightMenuHandler extends Handler {
     @Override
     public void handleRequest(Command command) {
-        if (command instanceof Proceed)
+        if (command instanceof FightMenu)
         {
-           command.execute();
+            command.execute();
         }
         else if (successor != null) {
             successor.handleRequest(command);
         }
-
     }
 }

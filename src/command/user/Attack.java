@@ -1,6 +1,8 @@
 package command.user;
 
+import chainOfResponsibility.Chain;
 import command.Command;
+import command.system.EnemyTurn;
 import mediator.Room;
 
 public class Attack implements Command {
@@ -12,6 +14,10 @@ public class Attack implements Command {
 
     @Override
     public void execute() {
+
         room.attack();
+        Command command = new EnemyTurn(this.room);
+        Chain chain = new Chain();
+        chain.handle(command);
     }
 }

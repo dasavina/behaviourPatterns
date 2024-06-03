@@ -14,16 +14,23 @@ public class Room {
     PC player;
     NPC npc;
     SavePoint savePoint;
-    EffectList playerEffects = new EffectList(player.stats);
-    EffectList npcEffects = new EffectList(npc.stats);
+    EffectList playerEffects;
+    EffectList npcEffects;
 
     public Room(PC player) {
         this.player = player;
+        playerEffects = new EffectList(player.stats);
+        savePoint = new SavePoint();
+
     }
 
     public void encounterNPC(NPC npc)
     {
         this.npc = npc;
+        if (npc != null) {
+            npcEffects = new EffectList(npc.stats);
+        }
+
     }
 
     public void talk()
@@ -48,6 +55,7 @@ public class Room {
     public void strategyChoice()
     {
         npc.chooseBattleStrategy(player);
+        npc.strategy.battle(npc.name);
     }
     public void affectNPC(Effect effect)
     {
@@ -80,6 +88,7 @@ public class Room {
     }
     public void NPCTurn()
     {
+        strategyChoice();
         if (npc.strategy instanceof AttackStrategy)
         {
             System.out.println(npc.stats.ATK-player.stats.DEF+" damage dealt");
@@ -89,13 +98,16 @@ public class Room {
         {
             Effect effect = generators.DebuffFactory.generateDebuff();
             affectPlayer(effect);
+            System.out.println("you were affected by " + effect.getClass().getSimpleName());
             effect = generators.BuffFactory.generateBuff();
             affectNPC(effect);
+            System.out.println(npc.name + " was affected by " + effect.getClass().getSimpleName());
         }
         if (npc.strategy instanceof DefenceStrategy)
         {
             DefUp effect = new DefUp(5);
             affectNPC(effect);
+            System.out.println(npc.name + " was affected by " + effect.getClass().getSimpleName());
             System.out.println(npc.stats.ATK-player.stats.DEF+" damage dealt");
             player.stats.HP = player.stats.HP- (npc.stats.ATK-player.stats.DEF);
 
@@ -114,9 +126,18 @@ public class Room {
     }
     public void visitEffects()
     {
+        System.out.println(npc.name + " is affected: ");
         Visitor visitor = new Visitor(npc.stats);
         npcEffects.accept(visitor);
+        System.out.println(player.name + " is affected: ");
         visitor = new Visitor(player.stats);
         playerEffects.accept(visitor);
+    }
+    public void clearEffects()
+    {
+        playerEffects.clear();
+        if (npcEffects != null) {
+            npcEffects.clear();
+        }
     }
 }

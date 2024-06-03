@@ -1,30 +1,30 @@
-package command.user;
+package command.system;
 
 import chainOfResponsibility.Chain;
 import command.Command;
-import command.system.CreateRoom;
-import command.system.EncounterMenu;
+import generators.NPCFactory;
 import mediator.Room;
 
-public class Proceed implements Command {
+public class CreateRoom implements Command {
     private Room room;
     Command command;
-    public Proceed(Room room) {
+
+    public CreateRoom(Room room) {
         this.room = room;
     }
 
     @Override
     public void execute() {
-        if (room.canProceed())
+        room.clearEffects();
+        room.encounterNPC(NPCFactory.generateNPC());
+        if (room.getNpc() == null)
         {
-            command = new CreateRoom(this.room);
+            command = new EmptyRoomMenu(this.room);
         }
         else {
-            System.out.println("can't proceed");
             command = new EncounterMenu(this.room);
         }
         Chain chain = new Chain();
         chain.handle(command);
     }
-
 }

@@ -1,5 +1,6 @@
 package command.system;
 
+import chainOfResponsibility.Chain;
 import command.Command;
 import mediator.Room;
 
@@ -13,5 +14,8 @@ public class EndOfTurn implements Command {
     @Override
     public void execute() {
         room.visitEffects();
+        Command command = new EncounterMenu(this.room);
+        Chain chain = new Chain();
+        chain.handle(command);
     }
 }

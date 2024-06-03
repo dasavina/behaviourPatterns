@@ -4,64 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="541d3e32-b383-4304-959e-52ae49be85b9" name="Changes" comment="tried the visitor">
-      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/AttackHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/BattleHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/Chain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/DeathHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/EndOfTurnHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/EnemyTurnHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/Handler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/ProceedHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/SaveHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/SpareHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/TalkHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/UseBuffHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/UseDebuffHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/system/EndOfTurn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/system/EnemyTurn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/system/Load.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/user/Attack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/user/Fight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/user/Proceed.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/user/Save.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/user/Spare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/user/Talk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/user/UseBuff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/user/UseDebuff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/generators/BuffFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/generators/DebuffFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/generators/NPCFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mediator/Room.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/observer/EffectObserver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/observer/Observable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/observer/Observer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/visitor/Visitor.java" afterDir="false" />
+    <list default="true" id="541d3e32-b383-4304-959e-52ae49be85b9" name="Changes" comment="command pattern. &#10;need to handle menus.">
+      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/EncounterMenuHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/FightMenuHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chainOfResponsibility/NewRoomHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/system/CreateRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/system/EmptyRoomMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/system/EncounterMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/system/FightMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/Fightable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/NPC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chainOfResponsibility/BattleHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chainOfResponsibility/EmptyRoomMenuHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chainOfResponsibility/Chain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chainOfResponsibility/Chain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chainOfResponsibility/ProceedHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chainOfResponsibility/ProceedHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/characters/PC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/PC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/command/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/command/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/command/system/EndOfTurn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/command/system/EndOfTurn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/command/system/EnemyTurn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/command/system/EnemyTurn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/command/system/Load.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/command/system/Load.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/command/user/Attack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/command/user/Attack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/command/user/Fight.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/command/user/Proceed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/command/user/Proceed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/command/user/Save.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/command/user/Save.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/command/user/Spare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/command/user/Spare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/command/user/Talk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/command/user/Talk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/command/user/UseBuff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/command/user/UseBuff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/command/user/UseDebuff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/command/user/UseDebuff.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/iterator/EffectList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iterator/EffectList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mediator/Interaction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/HostileState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/HostileState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/ImmuneState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/strategy/AttackStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategy/AttackStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templateMethod/AtkDown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/AtkDown.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templateMethod/AtkUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/AtkUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templateMethod/Bleeding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/Bleeding.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templateMethod/Curse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/Curse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templateMethod/DefDown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/DefDown.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templateMethod/DefUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/DefUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templateMethod/Effect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/Effect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templateMethod/Healing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/Healing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templateMethod/Immunity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/templateMethod/Immunity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/visitior/AffectingVisitor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/visitior/AtkAffectingVisitor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/visitior/DefAffectingVisitor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/visitior/EffectVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/visitor/EffectVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/visitior/HPAffectingVisitor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mediator/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mediator/Room.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,23 +75,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/crossPlatform/behaviourPatterns&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;D:/crossPlatform/behaviourPatterns/src/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
+    "Attach to process.pid 956.executor": "ProcessAttachDebug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/crossPlatform/behaviourPatterns",
+    "onboarding.tips.debug.path": "D:/crossPlatform/behaviourPatterns/src/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "editor.preferences.tabs"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -193,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715437309638</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="command pattern. &#10;need to handle menus.">
+      <option name="closed" value="true" />
+      <created>1717397298150</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717397298150</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -215,6 +194,7 @@
     <MESSAGE value="current effect handler removed" />
     <MESSAGE value="handlers as chain of responsibility" />
     <MESSAGE value="tried the visitor" />
-    <option name="LAST_COMMIT_MESSAGE" value="tried the visitor" />
+    <MESSAGE value="command pattern. &#10;need to handle menus." />
+    <option name="LAST_COMMIT_MESSAGE" value="command pattern. &#10;need to handle menus." />
   </component>
 </project>

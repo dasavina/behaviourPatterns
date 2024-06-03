@@ -1,41 +1,43 @@
 package chainOfResponsibility;
 
+import command.Command;
+
 public class Chain {
 
-    Handler newRoomHandler = new newRoomHandler();
-    Handler noNPCMenu = new NoNpcMenu();
-    Handler encounterMenu = new EncounterMenu();
-    Handler fightMenu = new FightMenu();
-    Handler saveHandler = new SaveHandler();
-    Handler proceedHandler = new ProceedHandler();
-    Handler talkHandler = new TalkHandler();
-
     Handler attackHandler = new AttackHandler();
+    Handler deathHandler = new DeathHandler();
+    Handler fightMenuHandler = new FightMenuHandler();
+    Handler enemyTurnHandler = new EnemyTurnHandler();
+    Handler emptyRoomMenuHandler = new EmptyRoomMenuHandler();
+    Handler encounterMenuHandler = new EncounterMenuHandler();
+    Handler endOfTurnHandler = new EndOfTurnHandler();
+    Handler newRoomHandler = new NewRoomHandler();
+    Handler proceedHandler = new ProceedHandler();
+    Handler saveHandler = new SaveHandler();
+    Handler spareHandler = new SpareHandler();
+    Handler talkHandler = new TalkHandler();
     Handler useBuffHandler = new UseBuffHandler();
     Handler useDebuffHandler = new UseDebuffHandler();
-    Handler deathHandler = new DeathHandler();
-    Handler enemyTurnHandler = new EnemyTurnHandler();
-    Handler endOfTurnHandler = new EndOfTurnHandler();
-    Handler spareHandler = new SpareHandler();
 
-    public Handler setChain() {
-        newRoomHandler.setSuccessor(noNPCMenu);
-        noNPCMenu.setSuccessor(proceedHandler);
+    public Chain() {
+        attackHandler.setSuccessor(deathHandler);
+        deathHandler.setSuccessor(fightMenuHandler);
+        fightMenuHandler.setSuccessor(enemyTurnHandler);
+        enemyTurnHandler.setSuccessor(emptyRoomMenuHandler);
+        emptyRoomMenuHandler.setSuccessor(encounterMenuHandler);
+        encounterMenuHandler.setSuccessor(endOfTurnHandler);
+        endOfTurnHandler.setSuccessor(newRoomHandler);
+        newRoomHandler.setSuccessor(proceedHandler);
         proceedHandler.setSuccessor(saveHandler);
-        saveHandler.setSuccessor(encounterMenu);
-        encounterMenu.setSuccessor(talkHandler);
-        talkHandler.setSuccessor(spareHandler);
-        spareHandler.setSuccessor(fightMenu);
-        fightMenu.setSuccessor(attackHandler);
-        attackHandler.setSuccessor(useBuffHandler);
+        saveHandler.setSuccessor(spareHandler);
+        spareHandler.setSuccessor(talkHandler);
+        talkHandler.setSuccessor(useBuffHandler);
         useBuffHandler.setSuccessor(useDebuffHandler);
-        useDebuffHandler.setSuccessor(enemyTurnHandler);
-        enemyTurnHandler.setSuccessor(deathHandler);
-        deathHandler.setSuccessor(endOfTurnHandler);
 
-        return newRoomHandler;
     }
 
-
-
+    public void handle(Command command)
+    {
+        attackHandler.handleRequest(command);
+    }
 }

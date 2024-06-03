@@ -1,6 +1,9 @@
 package command.user;
 
+import chainOfResponsibility.Chain;
 import command.Command;
+import command.system.EmptyRoomMenu;
+import command.system.EncounterMenu;
 import mediator.Room;
 
 public class Spare implements Command {
@@ -12,6 +15,9 @@ public class Spare implements Command {
 
     @Override
     public void execute() {
-        room.save();
+        room.spare();
+        Command command = new EncounterMenu(this.room);
+        Chain chain = new Chain();
+        chain.handle(command);
     }
 }

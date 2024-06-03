@@ -1,14 +1,15 @@
 package chainOfResponsibility;
 
 import command.Command;
+import command.system.CreateRoom;
 import command.user.Proceed;
 
-public class ProceedHandler extends Handler {
+public class NewRoomHandler extends Handler{
     @Override
     public void handleRequest(Command command) {
-        if (command instanceof Proceed)
+        if (command instanceof CreateRoom)
         {
-           command.execute();
+            command.execute();
         }
         else if (successor != null) {
             successor.handleRequest(command);

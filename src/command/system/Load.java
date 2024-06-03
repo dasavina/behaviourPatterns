@@ -1,5 +1,6 @@
 package command.system;
 
+import chainOfResponsibility.Chain;
 import command.Command;
 import mediator.Room;
 
@@ -12,6 +13,10 @@ public class Load implements Command {
 
     @Override
     public void execute() {
+
         room.load();
+        Command command = new CreateRoom(this.room);
+        Chain chain = new Chain();
+        chain.handle(command);
     }
 }

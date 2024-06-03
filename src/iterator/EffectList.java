@@ -60,7 +60,7 @@ public class EffectList implements Iterator<Effect> {
 
         @Override
         public void remove () {
-            list.remove(--index);
+            list.remove(index);
         }
 
         public Stats getStats () {
@@ -72,7 +72,16 @@ public class EffectList implements Iterator<Effect> {
             while (iterator.hasNext()) {
                 visitor = new Visitor(stats);
                 Effect effect = iterator.next();
+                if (effect.duration == 0)
+                {
+                    remove();
+
+                }
                 stats = effect.accept(visitor);
             }
+        }
+        public void clear()
+        {
+            list.clear();
         }
     }

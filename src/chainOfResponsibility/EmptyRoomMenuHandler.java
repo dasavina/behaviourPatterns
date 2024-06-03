@@ -1,18 +1,18 @@
 package chainOfResponsibility;
 
 import command.Command;
-import command.user.Proceed;
+import command.system.EmptyRoomMenu;
+import command.system.EndOfTurn;
 
-public class ProceedHandler extends Handler {
+public class EmptyRoomMenuHandler extends Handler {
     @Override
     public void handleRequest(Command command) {
-        if (command instanceof Proceed)
+        if (command instanceof EmptyRoomMenu)
         {
-           command.execute();
+            command.execute();
         }
         else if (successor != null) {
             successor.handleRequest(command);
         }
-
     }
 }
